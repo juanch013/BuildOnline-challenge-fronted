@@ -1,7 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Red+Hat+Display:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.placeholder-margin::placeholder {
-    padding-left: 2%;
+.input-text-padding{
+    text-indent: 3%;
 }
+
+.text-gradient {
+    background: linear-gradient(27.67deg, #3A3A3A 26.68%, #000000 125.92%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+.inter-font{
+    font-family: 'Inter', sans-serif;
+}
+
+.red-hat-font{
+    font-family: 'Red Hat Display', sans-serif;
+}
+

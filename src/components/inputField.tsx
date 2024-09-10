@@ -35,7 +35,7 @@ const InputField: React.FC<InputFieldProps> = ({
       required={required}
       autoComplete={autoComplete}
       placeholder={placeholder}
-      className={`block w-${maxWidth} min-w-${minWidth} rounded-md border-0 bg-input_bg py-1.5 text-placeholder_grey shadow-sm placeholder:text-placeholder_grey sm:text-sm sm:leading-6 ${className}`}
+      className={`block w-${maxWidth} min-w-${minWidth} input-text-padding rounded-md border-0 bg-input_bg py-1.5 text-input_text_grey shadow-sm placeholder:text-input_text_grey sm:text-sm sm:leading-6 ${className}`}
     />
   );
 };

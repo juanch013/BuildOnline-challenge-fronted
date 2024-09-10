@@ -15,9 +15,9 @@ const LoginForm = () => {
   };
 
   return (
-      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 bg-black">
+      <div className="flex flex-col min-h-full w-full flex-1 justify-start px-6 py-12 lg:px-8 bg-black pt-40">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-            <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white">
+            <h2 className="mt-10 text-center text-4xl font-black tracking-tight text-white red-hat-font">
               Welcome
             </h2>
           </div>
@@ -34,7 +34,7 @@ const LoginForm = () => {
                   autoComplete="email"
                   placeholder="Email"
                   onChange={(e) => setUsername(e.target.value)}
-                  className='placeholder-margin'
+                  className='h-14'
                   />
                 </div>
               </div>
@@ -48,8 +48,8 @@ const LoginForm = () => {
                   required
                   autoComplete="current-password"
                   placeholder='Password'
-                  onChange={(e) => setPassword(e.target.value)} 
-                  className='placeholder-margin'
+                  onChange={(e) => setPassword(e.target.value)}
+                  className='h-14'
                   />
                 </div>
               </div>
@@ -57,9 +57,9 @@ const LoginForm = () => {
               <div>
                 <button
                   type="submit"
-                  className="flex mt-16 w-full max-w-64 mx-auto justify-center rounded-full bg-green_bo px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="text-black font-sans font-medium text-lg w-64 h-14 flex mt-16 w-full max-w-64 mx-auto justify-center items-center rounded-full bg-green_bo px-3 py-1.5 text-sm font-semibold leading-6"
                 >
-                  Sign in
+                  Login
                 </button>
               </div>
             </form>
