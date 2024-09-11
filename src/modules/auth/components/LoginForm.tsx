@@ -3,21 +3,27 @@ import { useDispatch } from 'react-redux';
 import { login } from '../store/authSlice';
 import type { AppDispatch } from '../../../store';
 import InputField from '@/components/inputField';
+import { useRouter } from 'next/router';
 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const dispatch = useDispatch<AppDispatch>();
+  const router = useRouter();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    dispatch(login({ username, password }));
+    const resultAction = await dispatch(login({ username, password }));
+
+    if(login.fulfilled.match(resultAction)){
+      router.push('/contactList');
+    }
   };
 
   return (
-      <div className="flex flex-col min-h-full w-full flex-1 justify-start px-6 py-12 lg:px-8 bg-black pt-40">
+      <div className="flex flex-col min-h-full w-full flex-1 justify-start px-6 py-12 lg:px-8 bg-black pt-72">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-            <h2 className="mt-10 text-center text-4xl font-black tracking-tight text-white red-hat-font">
+            <h2 className="mt-10 text-center text-4xl font-bold tracking-tight text-white red-hat-font">
               Welcome
             </h2>
           </div>
@@ -34,7 +40,7 @@ const LoginForm = () => {
                   autoComplete="email"
                   placeholder="Email"
                   onChange={(e) => setUsername(e.target.value)}
-                  className='h-14'
+                  className='h-12'
                   />
                 </div>
               </div>
@@ -49,7 +55,7 @@ const LoginForm = () => {
                   autoComplete="current-password"
                   placeholder='Password'
                   onChange={(e) => setPassword(e.target.value)}
-                  className='h-14'
+                  className='h-12'
                   />
                 </div>
               </div>

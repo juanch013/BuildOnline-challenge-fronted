@@ -4,6 +4,7 @@ const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     './src/modules/**/components/**/*.{js,ts,jsx,tsx}',
+    './src/modules/**/components/*.{js,ts,jsx,tsx}',
     './src/modules/**/pages/**/*.{js,ts,jsx,tsx}',
     './src/components/*.{js,ts,jsx,tsx}'
   ],
@@ -15,6 +16,8 @@ const config: Config = {
         green_bo: "#54FA80",
         input_bg: "#242424",
         input_text_grey: "#C3C3C3",
+        contact_bg:"#242424",
+        contact_note_preview:"#FBEEFF"
       },
     },
   },

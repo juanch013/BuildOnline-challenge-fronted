@@ -1,13 +1,20 @@
+import dotenv from 'dotenv'
+dotenv.config()
+
 export const loginUser = async (email: string, password: string) => {
-    // Aquí harías la llamada a la API
-    const response = await fetch('/api/login', {
+
+  const path = `${process.env.NEXT_PUBLIC_API_PATH}/auth/login`
+
+  const response = await fetch(path, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
     });
+
     if (!response.ok) {
       throw new Error('Error en la autenticación');
     }
+    
     return response.json();
   };
   

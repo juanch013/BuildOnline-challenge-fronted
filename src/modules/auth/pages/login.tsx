@@ -1,10 +1,10 @@
 import LoginForm from '../components/LoginForm';
-import Example from '@/components/header';
+import Navbar from '@/components/navbar';
 
 const LoginPage = () => {
   return (
     <div className="flex flex-col justify-center items-center h-screen w-full">
-      <Example/>
+      <Navbar/>
       <LoginForm/>
     </div>
   );
