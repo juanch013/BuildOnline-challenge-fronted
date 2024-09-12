@@ -3,7 +3,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 export default function Navbar() {
-  const logoImagePath = `${process.env.IMAGES_PATH}buildOnlineLogo.png`
+  const logoImagePath = `${process.env.NEXT_PUBLIC_IMAGES_PATH}buildOnlineLogo.png`
   return (
     <div className='fixed top-10 left-0 w-full bg-black z-0 bg-black'>
       <div className='flex flex-row justify-between bg-white h-16 rounded-3xl mx-6'>

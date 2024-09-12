@@ -1,11 +1,5 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
-
-interface Contact {
-    id: string;
-    name: string;
-    email: string;
-    phoneNumber: string,
-}
+import Contact from '../models/contact'
 
 interface ContactContextType {
   contacts: Contact[];
