@@ -1,8 +1,17 @@
 'use client'
 import dotenv from 'dotenv'
+import { useRouter } from 'next/router';
 dotenv.config()
 
-export default function Navbar() {
+const Navbar = () => {
+  const router = useRouter();
+
+  const handleContactsClick = () => {
+    router.push({
+      pathname: '/contactList',
+    });
+  };
+
   const logoImagePath = `${process.env.NEXT_PUBLIC_IMAGES_PATH}buildOnlineLogo.png`
   return (
     <div className='fixed top-10 left-0 w-full bg-black z-0 bg-black'>
@@ -12,7 +21,7 @@ export default function Navbar() {
           <p className='mb-5 mt-auto ml-0 mr-0 font-bold font-sans text-l text-gradient'>uildOnline</p>
         </div>
         <div className='flex flex-row justify-between items-center w-48'>
-          <button className='inter-font font-medium'>contacts</button>
+          <button className='inter-font font-medium' onClick={handleContactsClick}>contacts</button>
           <button className='inter-font font-medium'>notes</button>
         </div>
         <div className='flex flex-row items-center justify-between items-center w-48'>
@@ -23,3 +32,5 @@ export default function Navbar() {
     </div> 
   )
 }
+
+export default Navbar;
