@@ -15,3 +15,5 @@ const contactValidation = Yup.object({
         .min(1, 'Phone Number must have 9 numbers at least')
         .required('The address cant be empty'),
   });
+
+  export default contactValidation;
